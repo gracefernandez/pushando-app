@@ -1,0 +1,12 @@
+
+.container{
+    margin: 90px 30px 50px ;
+    font-family: var(--font-mono);
+    align-items: inherit;   
+     text-align: center;
+    
+}
+
+.top{
+margin-bottom: 30px;
+}

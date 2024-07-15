@@ -1,0 +1,42 @@
+/* src/components/Navbar.module.css */
+
+.navbar {
+    width: 100%;
+    background-color: #33333357;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-family: var(--font-mono);
+
+  }
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navLink:hover {
+    color: #f0cf50;
+  }
+  
