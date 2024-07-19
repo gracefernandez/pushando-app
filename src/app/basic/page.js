@@ -2,7 +2,6 @@
 
 import styles from "../basic/basic.module.css";
 import BasicWheel from "../components/BasicWheel";
-import Navbar from "../components/Navbar";
 
 export default function BasicTrick() {
     const data = [
@@ -16,15 +15,14 @@ export default function BasicTrick() {
       ];
   return (
     <main >
-      <Navbar/>
       <div className= {styles.container}>
         <div className={styles.top}>
         <h1>Wheel of Basic Tricks</h1>
             </div>
         <p>
           A simple wheel of basic skateboarding tricks. Click the spin
-          button to spin the wheel and see what Trick you must to land. <br/> Try it!
-          Only for fun and practice.
+          button to spin the wheel and see what Trick you must to land. <br/> ♢ Try it!
+          Only for fun and practice. ♢
         </p>
       
     </div > 

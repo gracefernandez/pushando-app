@@ -30,17 +30,17 @@ const BasicWheel = ({data}) => {
         prizeNumber={prizeNumber}
         data={data}
         outerBorderColor = "#222222"
-        backgroundColors={['#3e3e3e', '#df3428']}
-        textColors={['#ffffff']}
+        backgroundColors={['#FFFFFF', '#df3428','#F0CF50', '#FFC0CB','#815CD1', '#00FFFF','#F9AA1F','#90EE90' ]}
+        textColors='black'
         onStopSpinning={() => {
             setMustSpin(false);
             setSelectedPrize(data[prizeNumber].option);
           }}      />
-     <Button variant="contained" onClick={handleSpinClick}>SPIN</Button>
+     <Button style={{backgroundColor:"#e24b2b",}}variant="contained" onClick={handleSpinClick}>SPIN</Button>
       <div style={{marginTop:"30px", textAlign:"center"}}>
       {selectedPrize !== null && (
         <div>
-          <h2>Selected Trick: {selectedPrize}</h2>
+          <h2>Selected : {selectedPrize}</h2>
         </div>
       )}
       </div>

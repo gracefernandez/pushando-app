@@ -10,7 +10,7 @@ const Navbar = () => {
         </Link>
         <div className={styles.navLinks}>
           <Link href="/basic"className={styles.navLink}> Basic </Link>
-          <Link href="/medium" className={styles.navLink}>Medium </Link>
+          <Link href="/mid" className={styles.navLink}>Mid </Link>
           <Link href="/hard" className={styles.navLink}>Hard </Link>
         </div>
       </div>
