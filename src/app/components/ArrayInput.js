@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, List, ListItem, ListItemText, Chip , Stack, Typography } from '@mui/material';
+import { TextField, Button, List, Chip , Stack, Typography } from '@mui/material';
 import styles from "../page.module.css";
 import BasicWheel from './BasicWheel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckDouble , faPlus , faCirclePlus, faBan, faCircleMinus} from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlus, faCircleMinus} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -26,23 +26,9 @@ const ArrayInput = () => {
     option: option,
     style: { textColor: "black" }
   }));
-//   console.log(resultArray);
-    // Log values to the console whenever they change
-  useEffect(() => {
-    console.log('Values:', values);
-
-
-  }, [values]);
 
   const handleDelete = (index) => {
-    console.log("index " + index);
-    if(values.length == 1){
-    setValues(['']);
-    }
-    else {
     setValues((prevValues) => prevValues.filter((_, i) => i !== index));
-    }
-
   };  
   
   const handleDeleteAll = () => {
@@ -51,15 +37,15 @@ const ArrayInput = () => {
 
   return (
     <div>
-      <div className={styles.pbuttons}>
-        <Button style={{color:"green"}} onClick={() => setValues(["T-shirt", "Sticker", "$1"])}>Basic Prize</Button>
-        <Button style={{color:"white"}} onClick={() => setValues(["T-shirt", "Sticker", "$5", "StickerPack", "Bandana"])}>Medium Prize</Button>
-        <Button style={{color:"red"}} onClick={() => setValues(["T-shirt", "Sticker", "$10", "StickerPack", "Deck", "Medias"])}>Hard Prize</Button>
+      <div >
+        <button className= {styles.pbutton} style={{color:"green", border:'none', margin:'1rem'}} onClick={() => setValues(["T-shirt", "Sticker", "$1"])}>Basic Prize</button> 
+        <button className={styles.pbutton} style={{border:'none', margin:'1rem'}} onClick={() => setValues(["T-shirt", "Sticker", "$5", "StickerPack", "Bandana"])}>Medium Prize</button>
+        <button className={styles.pbutton} style={{color:"red", border:'none', margin:'1rem'}} onClick={() => setValues(["T-shirt", "Sticker", "$10", "StickerPack", "Deck", "Medias"])}>Hard Prize</button>
       </div>    
       {values.length > 0 ? (
   <BasicWheel data={resultArray} />
 ) : (
-  <Typography variant="h5" color="error" fontFamily= "IBM Plex Mono">
+  <Typography variant="h5" color="error" fontFamily= "IBM Plex Mono" marginTop={5}>
     No data available
   </Typography>
 )}

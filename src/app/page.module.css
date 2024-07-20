@@ -6,6 +6,8 @@
   padding: 6rem;
   min-height: 100vh;  
   font-family: var(--font-mono);
+  position: relative;
+  min-height: 100vh;
 }
 
 .description {
@@ -64,14 +66,18 @@ margin-bottom: 20px;
   /* justify-items: center; */
 }
 
-.pbuttons{
-  display: flex;
-  margin-bottom: 5rem;
+.pbutton{
+  /* display: flex; */
   text-align: center;
   justify-content: center;
-  /* flex-direction: column; */
+  background: none;
+  font-family:"IBM Plex Mono";
+  font-size:"18px";
+   margin:'2rem';
+   cursor: pointer;
 
 }
+
 
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {

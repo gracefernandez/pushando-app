@@ -2,8 +2,11 @@
 
 import styles from "../basic/basic.module.css";
 import BasicWheel from "../components/BasicWheel";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function BasicTrick() {
+
     const data = [
         { option: 'Do a Trick', style: { backgroundColor: '#EE4040', textColor: 'black' } },
         { option: 'Boneless', style: { backgroundColor: '#F0CF50' , textColor: 'black' } },
@@ -15,7 +18,8 @@ export default function BasicTrick() {
       ];
   return (
     <main >
-      <div className= {styles.container}>
+    <Navbar/>
+   <div className= {styles.container}>
         <div className={styles.top}>
         <h1>Wheel of Basic Tricks</h1>
             </div>
@@ -29,6 +33,7 @@ export default function BasicTrick() {
          <div style={{textAlign:"center"}}>
              <BasicWheel data={data}/>
         </div>  
+        <Footer/>
     </main>
   );
 }

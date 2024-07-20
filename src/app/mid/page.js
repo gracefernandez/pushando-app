@@ -2,6 +2,8 @@
 
 import styles from "../basic/basic.module.css";
 import BasicWheel from "../components/BasicWheel";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function BasicTrick() {
     const data = [
@@ -15,6 +17,7 @@ export default function BasicTrick() {
       ];
   return (
     <main >
+      <Navbar/>
       <div className= {styles.container}>
         <div className={styles.top}>
         <h1>Wheel of Mid Tricks</h1>
@@ -29,6 +32,7 @@ export default function BasicTrick() {
          <div style={{textAlign:"center"}}>
              <BasicWheel data={data}/>
         </div>  
+        <Footer/>
     </main>
   );
 }

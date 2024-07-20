@@ -1,17 +1,17 @@
 "use client";
 
 import styles from "../app/page.module.css";
-// import Navbar from "./components/Navbar";
-import Button from '@mui/material/Button';
 import ArrayInput from "./components/ArrayInput";
-import React from "react"
-
+import React from "react" ;
+import NavBar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default function Home() {
   const prizes = ['Stickers', 'Stickers', 'Tshirt' , '$1']
+ 
   return (
     <main className={styles.main}>
-      {/* <Navbar /> */}
+      <NavBar/>
       <div className={styles.description}>
         <h1 >Instrucciones</h1>
           <p> Aquí encontraras 3 ruletas con 
@@ -27,7 +27,7 @@ export default function Home() {
               <ArrayInput/>
            </div>
     </div>
- 
+    <Footer/>
     </main>
   );
 }

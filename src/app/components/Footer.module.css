@@ -1,23 +1,43 @@
 /* src/components/Navbar.module.css */
 
-.footer {
-    width: 100%;
+.foot {
+  width: 100%;
+  /* background-color: #72707036; */
+  position: absolute;
+  bottom: -20rem;
+  font-family: var(--font-mono);
+
+}
+
+.footContainer {
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+/* .footer { */
+    /* width: 100%;
     background-color: #7270703b;
     margin-top: 10rem;
     bottom: 0;
     font-family: var(--font-mono);
-    text-align: center;
-    padding: 2rem;
+     padding: 10px 20px;
+    margin: auto;
+    text-align: center; */
 
-  }
+    /* padding: 2rem; */
+    /* display: flex; */
+/* } */
   
-  .footContainer {
+  /* .footContainer {
     display: flex;
-    /* padding: 10px 20px; */
-    max-width: 1200px;
+    padding: 10px 20px;
     margin: auto;
     text-align: center;
-  }
+    justify-content: space-between;
+  } */
   
   .logo {
     color: #fff;
