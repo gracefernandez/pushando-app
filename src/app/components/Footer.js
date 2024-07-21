@@ -12,8 +12,8 @@ const Footer = () => {
      
         <Image
             src={skatemamisLogo} // Route of the image file
-            height={144} // Desired size with correct aspect ratio
-            width={144} // Desired size with correct aspect ratio
+            height={120} // Desired size with correct aspect ratio
+            width={120} // Desired size with correct aspect ratio
             alt='skm-logo'
             priority
             />

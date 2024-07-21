@@ -6,11 +6,14 @@
     max-width: 600px; /* You can adjust this value */
     margin: 0 auto;
     text-align: center;
-    
+    padding: 4rem;
+    /* height: fit-content; */
   }
   
   @media (max-width: 768px) {
     .container {
       max-width: 90%; /* Adjust for smaller screens */
+      padding: 2rem;
     }
+  
   }

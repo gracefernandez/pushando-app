@@ -1,9 +1,9 @@
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;  
   font-family: var(--font-mono);
   position: relative;
@@ -16,10 +16,42 @@
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
+  padding : 6rem;
   width: 100%;
   z-index: 2;
 
 }
+
+.levels{
+  background: rgba(184, 184, 184, 0.25);
+  /* background-color: aqua; */
+  border-radius: 12px;
+  /* padding: 4px; */
+  width: 25%;
+  margin: 2rem;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+ }
+ .basics {
+  color: green;
+  /* text-align: center; */
+  margin-bottom: 2rem;
+}
+.mids{
+  display: flex;
+  margin-bottom: 2rem;
+
+}
+.hard {
+  color: red;
+  display: flex;
+  margin-bottom: 2rem;
+
+}
+
 
 .description h1 {
   display: flex;
@@ -52,6 +84,9 @@
   margin-top: 10px;
 }
 
+
+
+
 .prize h1 {
 margin-bottom: 20px;
 
@@ -67,7 +102,6 @@ margin-bottom: 20px;
 }
 
 .pbutton{
-  /* display: flex; */
   text-align: center;
   justify-content: center;
   background: none;
@@ -87,15 +121,27 @@ margin-bottom: 20px;
 /* Mobile */
 
 @media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
+ 
   .description {
     margin: 1rem;
+    font-size: 0.8rem;
+    min-width: 30rem;
+
+    /* background-color: aqua; */
   }
   .pbuttons{
       text-align: center;
       flex-direction: column;
+
+  }
+ 
+  .levels{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+    
 
   }
   .twobttn{
@@ -103,17 +149,8 @@ margin-bottom: 20px;
     
   }
 
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
   .description p,
   .description div {
-    /* display: flex; */
     justify-content: center;
     width: 100%;
   }
@@ -135,25 +172,39 @@ margin-bottom: 20px;
   }
 
   .description div {
-    /* align-items: flex-end; */
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
+    padding: 4rem;
     height: 200px;
     background: linear-gradient(
       to bottom,
       transparent 0%,
       rgb(var(--background-end-rgb)) 40%
     );
-    z-index: 1;
   }
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
+@media (min-width: 700px) and (max-width: 1120px) {
   /* .grid {
     grid-template-columns: repeat(2, 50%);
   } */
+  .description {
+    margin: 1rem;
+    font-size: 0.8rem;
+    min-width: 30rem;
+
+    /* background-color: aqua; */
+  }
+  .levels{
+    display: inline-block;
+    /* flex-direction: row; */
+    text-align: center;
+    margin: 1rem;
+    margin-top: 1rem;
+    min-width: 10rem;
+    
+
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
