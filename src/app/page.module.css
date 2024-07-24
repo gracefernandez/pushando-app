@@ -1,57 +1,47 @@
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.mains {
+  justify-content: center;
   align-items: center;
   min-height: 100vh;  
   font-family: var(--font-mono);
-  position: relative;
-  min-height: 100vh;
+  /* position: relative;  */
 }
 
 .description {
-  display: inline-block;
-  justify-content: inherit;
-  align-items: inherit;
+  display: block;
   font-size: 0.85rem;
-  max-width: var(--max-width);
-  padding : 6rem;
+  padding: 6rem;
   width: 100%;
-  z-index: 2;
-
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* z-index: 2; */
 }
 
-.levels{
-  background: rgba(184, 184, 184, 0.25);
-  /* background-color: aqua; */
+.levels {
+  /* background: rgba(184, 184, 184, 0.093); */
+  background-image: linear-gradient(rgba(115, 115, 115, 0.007), rgba(202, 199, 201, 0.124));
   border-radius: 12px;
-  /* padding: 4px; */
   width: 25%;
   margin: 2rem;
   display: inline-flex;
   align-items: center;
   text-align: center;
   justify-content: center;
+}
 
- }
- .basics {
+.basics {
   color: green;
-  /* text-align: center; */
   margin-bottom: 2rem;
 }
-.mids{
+
+.mids, .hard {
   display: flex;
   margin-bottom: 2rem;
-
 }
+
 .hard {
   color: red;
-  display: flex;
-  margin-bottom: 2rem;
-
 }
-
 
 .description h1 {
   display: flex;
@@ -59,94 +49,96 @@
   align-items: center;
   gap: 0.5rem;
 }
+.listOfchip{
+  width: 30rem;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap:1rem;
+  text-align: center;
+  justify-items: center;
+  margin-left: 35%;
+  /* display: inline-block; */
+
+
+}
 
 .description p {
-  /* position: relative; */
   margin-top: 3rem;
   padding: 1rem;
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
 }
-.addPrize{
-  margin-top: 80px;
-  /* font-family: "Roboto Mono"; */
 
+.addPrize {
+  margin-top: 80px;
+  margin: 4rem;
+  /* justify-content: center; */
 }
-.prize{
-  margin-top:10rem;
+
+.prize {
+  margin-top: 10rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
-}
-.chip{
-  margin-top: 10px;
 }
 
-
-
+.chip {
+  /* margin-top: 10px; */
+}
 
 .prize h1 {
-margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
-.twobttn{
-  /* text-align: center; */
+
+.twobttn {
   justify-content: center;
-  display: inline-block;
   flex-wrap: wrap;
-
-  /* margin: 10px; */
-  /* justify-items: center; */
 }
 
-.pbutton{
+.pbutton {
   text-align: center;
   justify-content: center;
   background: none;
-  font-family:"IBM Plex Mono";
-  font-size:"18px";
-   margin:'2rem';
-   cursor: pointer;
-
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  margin: 2rem;
+  cursor: pointer;
 }
 
-
-/* Enable hover only on non-touch devices */
-/* @media (hover: hover) and (pointer: fine) {
-
-} */
+.divider{
+  margin-bottom:2rem ;
+}
 
 /* Mobile */
-
 @media (max-width: 700px) {
- 
   .description {
-    margin: 1rem;
     font-size: 0.8rem;
-    min-width: 30rem;
-
-    /* background-color: aqua; */
   }
-  .pbuttons{
-      text-align: center;
-      flex-direction: column;
 
+  .pbuttons {
+    text-align: center;
+    flex-direction: column;
   }
- 
-  .levels{
+
+  .levels {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 0;
     margin-top: 1rem;
-    
+    /* min-width: 10rem; */
 
   }
-  .twobttn{
+  .basics, .mids , .hard{
+    min-width: 9rem;
+  }
+  
+
+  .twobttn {
     margin-right: 20px;
-    
   }
 
   .description p,
@@ -167,10 +159,14 @@ margin-bottom: 20px;
       rgba(var(--background-start-rgb), 1),
       rgba(var(--callout-rgb), 0.5)
     );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
   }
+  .listOfchip{
+    display: flex;
+    margin-left: 5%;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
+  }
   .description div {
     padding: 4rem;
     height: 200px;
@@ -184,38 +180,22 @@ margin-bottom: 20px;
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 700px) and (max-width: 1120px) {
-  /* .grid {
-    grid-template-columns: repeat(2, 50%);
-  } */
   .description {
-    margin: 1rem;
+    /* margin: 1rem; */
     font-size: 0.8rem;
     min-width: 30rem;
-
-    /* background-color: aqua; */
   }
-  .levels{
+
+  .levels {
     display: inline-block;
-    /* flex-direction: row; */
     text-align: center;
     margin: 1rem;
     margin-top: 1rem;
     min-width: 10rem;
-    
-
   }
-
 }
 
 @media (prefers-color-scheme: dark) {
-  
+  /* Add dark mode styles if necessary */
 }
 
-/* @keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-} */

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { TextField, Button, List, Chip , Stack, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { TextField, Button, Chip , Stack, Typography } from '@mui/material';
 import styles from "../page.module.css";
 import BasicWheel from './BasicWheel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,7 +52,9 @@ const ArrayInput = () => {
       <div className={styles.addPrize}>
         <TextField
           id="outlined-basic"
-          label="Add Prize" variant="outlined" color="success" focused
+          label="Add Prize or Challenge" 
+          variant="outlined" 
+          color="success" 
           value={inputValue}
           onChange={handleInputChange}
           style={{ marginBottom: '20px', marginRight: '10px', backgroundColor: "whitesmoke" }}
@@ -65,15 +67,15 @@ const ArrayInput = () => {
           All 
         </Button>
         </div>
-        <List >
+       
+      </div>
+ <div className={styles.listOfchip}>
           {values.map((value, index) => (
             <Stack className={styles.chip} key={index} direction="row">
-              <Chip style={{ color: "green"}} variant='outlined' label={value} onDelete = {()=>handleDelete(index)} />
+              <Chip style={{ color: "green", backgroundColor:'rgb(240, 237, 239)'}} variant='outlined' label={value} onDelete = {()=>handleDelete(index)} />
             </Stack>
           ))}
-        </List>
-      </div>
-
+        </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ export default function Home() {
   const prizes = ['Stickers', 'Stickers', 'Tshirt' , '$1']
  
   return (
-    <main className={styles.main}>
+    <div className={styles.mains}>
       <NavBar/>
       <div className={styles.description}>
         <h1 >Instrucciones</h1>
@@ -34,14 +34,14 @@ export default function Home() {
     
     <div className={styles.prize}>
     <Divider sx={{width:'100%', marginBottom:'20px'}}/>
-           <h1 > Create your challenge  / Prizes by level</h1>
+           <h1 > Create your challenge  / Find Prizes by level</h1>
                       {/* <p> aqui podrás tener un ejemplo de premios que se obtienen por nivel. </p> */}
 
-           <div >
+           <div className= {styles.divider} >
               <ArrayInput/>
            </div>
-    </div>
+    </div >
     <Footer/>
-    </main>
+    </div>
   );
 }

@@ -25,7 +25,7 @@ const Footer = () => {
           <div className={styles.flinks}> 
           <a className={styles.shopLink} href="https://www.skatemamis.com/shop" target="_blank" rel="noopener noreferrer">
              Shop </a>
-          <a className={styles.shopLink}  href="https://www.instagram.com/vivopushando/" >
+          <a className={styles.shopLink}  href="https://www.instagram.com/vivopushando/" target="_blank" rel="noopener noreferrer">
             Instagram </a>
          </div>  
           </div>
